@@ -167,7 +167,7 @@ main section.as-heroe.visible {
 main section.as-heroe aside {
     height: 300px;
     width: 100%;
-    background-image: url("/images/arlington-research-nFLmPAf9dVc-unsplash.jpg");
+    background-image: url("../images/arlington-research-nFLmPAf9dVc-unsplash.jpg");
    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
