@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+  html{
+    height: auto;
+  }
+    body {
+      overflow-x: hidden;
+      height: auto !important;
+    }
+
+    main{
+      width: 98%;
+      margin-top: 0rem;
+    }
+    .logo-container {
+      width: calc(100% + 4rem);
+    }
+    a.logo-clickable  {
+      top: 2rem;
+      left: 3rem;
+    }
+    .flex-h {
+      flex-direction: column;
+    }
+ 
+    section.as-heroe aside{
+      flex: 1;
+      width: 100%;
+    }
+  
+  }
+  

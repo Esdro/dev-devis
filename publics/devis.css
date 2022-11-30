@@ -1,0 +1,169 @@
+main section.reparateur-starting  {
+    gap: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -100%;
+    transition:  visibility 0s,   opacity 0.5s ,  margin-top 2.5s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+  }
+  main section.reparateur-starting.visible {
+      visibility: visible;
+      opacity: 1;
+      margin-top: 0;
+      transition:  visibility 0s,   opacity 0.5s ,  margin-top 2.5s;
+      transition-timing-function: ease-in-out;
+  }
+
+main section.reparateur-starting aside {
+    height: 300px;
+    width: 100%;
+    background-image: url("/images/arlington-research-nFLmPAf9dVc-unsplash.jpg");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+section.reparateur-starting .box-content {
+    padding: 0 5%  0 15%;
+    overflow: hidden;
+}
+section.reparateur-starting .box-content  h2.heading {
+    font-size: 2.5rem;
+    color: black;
+}
+.right-box .fake-opacity {
+    background-color: white;
+    opacity: .77;
+}
+section.reparateur-starting .box-content  button {
+    width: 107%;
+    background-color: var(--like-blue) !important;
+    color: white !important;
+}
+
+
+
+
+section.choix-appareil {
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+section.choix-appareil  aside.mega-content  {
+    background-color: #d9d9d9;
+    border-radius: 10px;
+}
+section.choix-appareil aside.left-heading{
+    font-size: .9rem;
+    padding:  .4rem .5rem;
+}
+section.choix-appareil aside.left-heading .heading h2 {
+    font-size: 1.7rem;
+} 
+
+section.choix-appareil aside.left-heading .heading {
+    margin: .7rem .4rem;
+}
+.infos {
+    background-color: #D4E0F1;
+    padding: .3rem;
+    border-radius: 7px;
+}
+.infos .head {
+    margin: .4rem;
+    display: flex;
+    gap: .7rem;
+    justify-content: center;
+    align-items: center;
+}
+.infos .head i {
+    font-size: 1.5rem;
+}
+
+.suggest-imei {
+    margin: .7rem .2rem;
+    text-align: center;
+}
+
+
+aside.mega-content {
+    padding: .5rem;
+    align-self: flex-start;
+}
+aside.mega-content .categories {
+    display: flex;
+    gap: .4rem;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    list-style: none;
+}
+.categories li {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+
+}
+
+.categories li.listed .heading  {
+    flex-direction: column;
+    padding: 1rem 0;
+    box-sizing: border-box;
+}
+.categories li.listed .heading  .img-wrapper {
+    height: 300px;
+}
+.categories li .heading  {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    gap: .7rem;
+}
+.categories li .heading > * {
+    flex: 1;
+}
+.categories li .heading .img-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.categories li .heading h4{
+    font-size: 1rem;
+}
+.categories li .heading .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.categories li.listed  {
+    height: 350px !important;
+}
+.category-contents > div {
+    display: none;
+}
+.category-contents[data-category="smartphone"] div[class^="smart"] {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
+.category-contents[data-category="tablette"] div[class^="tablette"] {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
+.category-contents[data-category="ordinateur"] div[class^="ordinateur"] {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
+.category-contents[data-category="autre-objet"] div[class^="autre-objet"] {
+    display: block;
+    padding: 1rem;
+    width: 100%;
+}
