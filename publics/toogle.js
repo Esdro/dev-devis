@@ -24,6 +24,7 @@ window.onload = () => {
 
 function setupListeners() {
 
+/*
     if ( document.querySelector('button.js-action-devis') !== null) {
         document.querySelector('button.js-action-devis').addEventListener('click', (ev) => {
      removeVisibleClass('section.as-heroe');
@@ -37,14 +38,18 @@ function setupListeners() {
         addVisibleClass(` section.${ev.target.dataset.sectionCible}`);
     } )
 
-    }
-    if (document.querySelectorAll(".mega-content .categories > li ") !== null ) {
-        document.querySelectorAll(".mega-content .categories > li ").forEach(li => {
+    }*/
+
+    let firstCategoriesAppareil = document.querySelectorAll(".mega-content .categories > li ");
+    let firstContentsToggler  = document.querySelector(".mega-content .category-contents");
+
+    if (firstCategoriesAppareil !== null ) {
+        firstCategoriesAppareil.forEach(li => {
             li.addEventListener('click' , function () {
                 let appareilChoisi = this.dataset.appareilChoisi;
-                if (appareilChoisi !== null &&  document.querySelector(".mega-content .category-contents") !== null ) {
+                if (appareilChoisi !== null &&  firstContentsToggler !== null ) {
                     
-                return    document.querySelector(".mega-content .category-contents").dataset.appareilChoisi = appareilChoisi;
+                return    firstContentsToggler.dataset.appareilChoisi = appareilChoisi;
                 }
             })
         })
