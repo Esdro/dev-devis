@@ -111,11 +111,17 @@ aside.mega-content .categories {
 
 .categories li.listed .heading  {
     flex-direction: column;
-    padding: 1rem 0;
+    padding: .5rem 0;
+    height: 100%;
     box-sizing: border-box;
 }
 .categories li.listed .heading  .img-wrapper {
-    height: 300px;
+    height: 100%;
+    flex: 50%;
+}
+.categories li.listed .heading  h4 ,
+.categories li.listed .heading  i {
+    flex: 20%;
 }
 .categories li .heading  {
     display: flex;
@@ -142,7 +148,23 @@ aside.mega-content .categories {
 }
 
 .categories li.listed  {
-    height: 350px !important;
+    height: 150px !important;
+    max-width: 150px;
+    padding: .5rem;
+    object-fit: contain;
+}
+.category-contents {
+    display: none;
+    margin-top: -110%;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0s, margin-top 2.4s;
+}
+.category-contents.displayed {
+    display: block;
+    margin-top: 0%;
+    visibility: visible;
+    opacity: 1;
 }
 .category-contents > div {
     display: none;
@@ -166,4 +188,37 @@ aside.mega-content .categories {
     display: block;
     padding: 1rem;
     width: 100%;
+}
+.marques li {
+    list-style: none;
+    display: block;
+    padding: .4rem .2rem;
+    font-size: large;
+    cursor: pointer;
+    /* border:  1.1px solid red; */
+    box-sizing: border-box;
+    margin-top: .4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.marques li:first-of-type{
+    margin-top:  0 ;
+}
+.marques li:hover {
+    background-color: #efefef;
+}
+
+.marques li::after{
+    box-sizing: border-box;
+    content: "+";
+    margin-left: .4rem;
+    float: right;
+    background-color: yellow;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    vertical-align: middle;
+    display: flex;
+    align-self: flex-start;
 }

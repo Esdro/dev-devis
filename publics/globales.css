@@ -131,7 +131,7 @@ button{
 a.logo-clickable {
   width: 150px;
   position: absolute;
-  top: 5rem;
+  top: 4rem;
   left: 2.5rem;
   display: block;
   z-index: 4;

@@ -38,13 +38,44 @@ function setupListeners() {
     } )
 
     }
-    if (document.querySelectorAll(".mega-content .categories > li ") !== null ) {
-        document.querySelectorAll(".mega-content .categories > li ").forEach(li => {
+
+    /**
+     * réagir au choix du type d'appareil; 
+     */
+
+    let DeviceAppareil = document.querySelectorAll(".mega-content .categories > li ");
+    let CategoriesContents = document.querySelector(".mega-content .category-contents") 
+   
+
+    console.log(CategoriesContents);
+   // console.log(document.querySelectorAll(".mega-content .categories > li "));
+
+    if (  DeviceAppareil !== null ) {
+
+        DeviceAppareil.forEach(li => {
             li.addEventListener('click' , function () {
+
                 let appareilChoisi = this.dataset.appareilChoisi;
-                if (appareilChoisi !== null &&  document.querySelector(".mega-content .category-contents") !== null ) {
+
+              //  console.log(appareilChoisi);
+              
+                if (appareilChoisi !== null &&  CategoriesContents !== null ) { 
+
+                    if (li.classList.contains('listed') ) {
+                        li.classList.remove('listed');
+                        CategoriesContents.classList.remove("displayed");
+                        CategoriesContents.dataset.category = appareilChoisi;
+                        return
+                    }
+
+                    DeviceAppareil.forEach((element) => {
+                        element.classList.remove('listed');
+                    })
                     
-                return    document.querySelector(".mega-content .category-contents").dataset.appareilChoisi = appareilChoisi;
+                    li.classList.add('listed');
+                    CategoriesContents.classList.add("displayed");
+                    CategoriesContents.dataset.category = appareilChoisi;
+                 
                 }
             })
         })
