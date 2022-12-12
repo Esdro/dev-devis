@@ -24,6 +24,7 @@ window.onload = () => {
 
 function setupListeners() {
 
+/*
     if ( document.querySelector('button.js-action-devis') !== null) {
         document.querySelector('button.js-action-devis').addEventListener('click', (ev) => {
      removeVisibleClass('section.as-heroe');
@@ -56,26 +57,9 @@ function setupListeners() {
             li.addEventListener('click' , function () {
 
                 let appareilChoisi = this.dataset.appareilChoisi;
-
-              //  console.log(appareilChoisi);
-              
-                if (appareilChoisi !== null &&  CategoriesContents !== null ) { 
-
-                    if (li.classList.contains('listed') ) {
-                        li.classList.remove('listed');
-                        CategoriesContents.classList.remove("displayed");
-                        CategoriesContents.dataset.category = appareilChoisi;
-                        return
-                    }
-
-                    DeviceAppareil.forEach((element) => {
-                        element.classList.remove('listed');
-                    })
+                if (appareilChoisi !== null &&  document.querySelector(".mega-content .category-contents") !== null ) {
                     
-                    li.classList.add('listed');
-                    CategoriesContents.classList.add("displayed");
-                    CategoriesContents.dataset.category = appareilChoisi;
-                 
+                return    document.querySelector(".mega-content .category-contents").dataset.appareilChoisi = appareilChoisi;
                 }
             })
         })
