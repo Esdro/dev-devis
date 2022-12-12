@@ -57,9 +57,26 @@ function setupListeners() {
             li.addEventListener('click' , function () {
 
                 let appareilChoisi = this.dataset.appareilChoisi;
-                if (appareilChoisi !== null &&  document.querySelector(".mega-content .category-contents") !== null ) {
+
+              //  console.log(appareilChoisi);
+              
+                if (appareilChoisi !== null &&  CategoriesContents !== null ) { 
+
+                    if (li.classList.contains('listed') ) {
+                        li.classList.remove('listed');
+                        CategoriesContents.classList.remove("displayed");
+                        CategoriesContents.dataset.category = appareilChoisi;
+                        return
+                    }
+
+                    DeviceAppareil.forEach((element) => {
+                        element.classList.remove('listed');
+                    })
                     
-                return    document.querySelector(".mega-content .category-contents").dataset.appareilChoisi = appareilChoisi;
+                    li.classList.add('listed');
+                    CategoriesContents.classList.add("displayed");
+                    CategoriesContents.dataset.category = appareilChoisi;
+                 
                 }
             })
         })
