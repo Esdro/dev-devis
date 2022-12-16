@@ -73,6 +73,7 @@ function setupListeners() {
                         element.classList.remove('listed');
                     })
                     
+                    CategoriesContents.classList.remove("displayed");
                     li.classList.add('listed');
                     CategoriesContents.classList.add("displayed");
                     CategoriesContents.dataset.category = appareilChoisi;

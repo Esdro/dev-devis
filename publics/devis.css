@@ -51,7 +51,7 @@ section.choix-appareil {
 }
 
 section.choix-appareil  aside.mega-content  {
-    background-color: #d9d9d9;
+    /* background-color: #d9d9d9; */
     border-radius: 10px;
 }
 section.choix-appareil aside.left-heading{
@@ -98,6 +98,10 @@ aside.mega-content .categories {
     width: 100%;
     align-items: center;
     list-style: none;
+    /* margin: 0; */
+    padding: .2rem;
+    border-radius: 5px;
+    background-color: #d9d9d9;
 }
 .categories li {
     display: flex;
@@ -129,22 +133,26 @@ aside.mega-content .categories {
     justify-content: center;
     align-items: center;
     height: 70px;
-    gap: .7rem;
+    gap: .2rem;
 }
-.categories li .heading > * {
-    flex: 1;
-}
+
 .categories li .heading .img-wrapper{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .categories li .heading h4{
     font-size: 1rem;
 }
 .categories li .heading .img-wrapper img{
     width: 100%;
+    max-width: 50px;
+    max-height: 50px;
     height: 100%;
-    object-fit: fill;
+    /* object-fit: fill; */
+    border-radius: 50%;
 }
 
 .categories li.listed  {
@@ -152,17 +160,23 @@ aside.mega-content .categories {
     max-width: 150px;
     padding: .5rem;
     object-fit: contain;
+    background-color: #efefef;
+    border-radius: 50%;
 }
 .category-contents {
     display: none;
-    margin-top: -110%;
+    position: relative;
+   right: -120%;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0s, margin-top 2.4s;
+    margin-top: .6rem;
+    background-color: #d9d9d9;
+    border-radius: 7px;
+    transition: all .75s ease-in-out;
 }
 .category-contents.displayed {
     display: block;
-    margin-top: 0%;
+    right: 0%;
     visibility: visible;
     opacity: 1;
 }
@@ -214,11 +228,23 @@ aside.mega-content .categories {
     box-sizing: border-box;
     content: "+";
     margin-left: .4rem;
-    float: right;
+    /* float: right; */
     background-color: yellow;
     padding: .5rem 1rem;
     cursor: pointer;
-    vertical-align: middle;
-    display: flex;
-    align-self: flex-start;
 }
+
+.heading .img-wrapper  {
+    flex: 30%;
+}
+.heading h4 {
+    flex: 60%;
+}
+
+.heading h4 ~ i {
+    flex: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
