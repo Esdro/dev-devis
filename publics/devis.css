@@ -184,8 +184,11 @@ aside.mega-content .categories {
     display: none;
 }
 .category-contents[data-category="smartphone"] div[class^="smart"] {
-    display: block;
+    display: flex;
     padding: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
     width: 100%;
 }
 .category-contents[data-category="tablette"] div[class^="tablette"] {
@@ -248,3 +251,8 @@ aside.mega-content .categories {
     justify-content: flex-start;
 }
 
+
+.smartphone-content  > * {
+    border: 1px solid red;
+    flex: 1;
+}
