@@ -57,6 +57,10 @@ section.choix-appareil  aside.mega-content  {
 section.choix-appareil aside.left-heading{
     font-size: .9rem;
     padding:  .4rem .5rem;
+    display: none;
+}
+section.choix-appareil aside.left-heading.listed{
+    display: block;
 }
 section.choix-appareil aside.left-heading .heading h2 {
     font-size: 1.7rem;
@@ -147,12 +151,12 @@ aside.mega-content .categories {
     font-size: 1rem;
 }
 .categories li .heading .img-wrapper img{
-    width: 100%;
-    max-width: 50px;
+    width: auto;
+    max-width: 100px;
     max-height: 50px;
     height: 100%;
     /* object-fit: fill; */
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 .categories li.listed  {
@@ -223,19 +227,11 @@ aside.mega-content .categories {
 .marques li:first-of-type{
     margin-top:  0 ;
 }
-.marques li:hover {
+.marques li.marque:hover {
     background-color: #efefef;
 }
 
-.marques li::after{
-    box-sizing: border-box;
-    content: "+";
-    margin-left: .4rem;
-    /* float: right; */
-    background-color: yellow;
-    padding: .5rem 1rem;
-    cursor: pointer;
-}
+
 
 .heading .img-wrapper  {
     flex: 30%;
@@ -252,7 +248,132 @@ aside.mega-content .categories {
 }
 
 
-.smartphone-content  > * {
-    border: 1px solid red;
-    flex: 1;
+.smartphone-content  > .marques {
+    /* border: 1px solid red; */
+    flex: 30%;
+}
+.smartphone-content  > .global-wrapper {
+    /* border: 1px solid red; */
+    flex: 70%;
+}
+
+ul.marques > li.marque {
+    padding: .6rem;
+}
+
+ul.marques > li.marque.listed{
+    background-color: yellow;
+    position: relative;
+}
+.marques li i.fa-minus{
+   display: none;
+}
+
+ul.marques > li.marque.listed i.fa-minus{
+   display: block;
+}
+ul.marques > li.marque.listed i.fa-plus{
+   display: none;
+}
+ul.marques > li.marque.listed::after{
+    content: "";
+  display: inline-block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-right: 1.8rem solid transparent;
+  border-bottom: 1.8rem solid black;
+  top: 4.8px;
+  bottom: 0;
+  right: -1rem;
+  transform: rotate(-135deg);
+  position: absolute;
+}
+
+ul.catalog {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+}
+ul.catalog > *  {
+    align-self: flex-start;
+    flex: 45%;
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    /* align-items: flex-start; */
+    /* border: 1px solid red; */
+}
+ul.catalog  li {
+    margin: .5rem 0;
+    box-shadow: 5px 5px 15px #ccc;
+    border-radius: .4rem;
+}
+ul.catalog  li> a:hover{
+    background-color: yellow;
+    border-radius: inherit;
+}
+ul.catalog  li:nth-child(even){
+    background-color: #ccc;
+}
+ul.catalog  li:nth-child(odd){
+    background-color: #efefef;
+}
+ul.catalog  li > a.link {
+    display: block;
+    padding: .5rem;
+    line-height: normal;
+    transition: background-color 650ms ease-in-out;
+}
+
+div.catalog-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(650px);
+    transform-origin: top right;
+    transition: transform 900ms ease-in-out;
+}
+div.catalog-wrapper.displayed {
+    visibility: visible;
+    transform: translateY(0px);
+    opacity: 1;
+    transition: transform 900ms ease-in-out;
+}
+
+
+div.catalog-wrapper[data-catalog-active="apple"] > ul.catalog.apple {
+   display: block; 
+}
+div.catalog-wrapper[data-catalog-active="samsung"] > ul.catalog.samsung {
+   display: flex; 
+}
+div.catalog-wrapper[data-catalog-active="xiaomi"] > ul.catalog.xiaomi {
+   display: flex; 
+}
+div.catalog-wrapper[data-catalog-active="oppo"] > ul.catalog.oppo {
+   display: flex; 
+}
+div.catalog-wrapper[data-catalog-active="honor"] > ul.catalog.honor {
+   display: flex; 
+}
+div.catalog-wrapper[data-catalog-active="huawei"] > ul.catalog.huawei {
+   display: flex; 
+}
+div.catalog-wrapper[data-catalog-active="sony"] > ul.catalog.sony {
+   display: block; 
+}
+div.catalog-wrapper[data-catalog-active="wiko"] > ul.catalog.wiko {
+   display: block; 
+}
+div.catalog-wrapper[data-catalog-active="nokia"] > ul.catalog.nokia {
+   display: block; 
+}
+div.catalog-wrapper[data-catalog-active="asus"] > ul.catalog.asus {
+   display: block; 
+}
+div.catalog-wrapper[data-catalog-active="autres-marques"] > ul.catalog.autres-marques {
+   display: block; 
 }
