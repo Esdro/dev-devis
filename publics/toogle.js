@@ -96,7 +96,7 @@ function setupListeners() {
      */
 
     let marquesAppareil = document.querySelectorAll(' ul.marques > li.marque  ')
-    let catalogWrapper = document.querySelector(' .catalog-wrapper  ')
+    //let catalogWrapper = document.querySelector(' .catalog-wrapper  ')
 
     if (  marquesAppareil !== null ) {
 
@@ -107,15 +107,15 @@ function setupListeners() {
 
               //  console.log(marqueChoisie);
               
-                if (marqueChoisie !== null &&  catalogWrapper !== null ) { 
+                if (marqueChoisie !== null &&  li.parentNode.parentNode.children[1].firstElementChild !== null ) { 
                      // on stock la marque  dans le local
                     if (localStorage !== undefined) {
                         localStorage.setItem('marque', marqueChoisie)
                     }
                     if (li.classList.contains('listed') ) {
                         li.classList.remove('listed');
-                        catalogWrapper.classList.remove("displayed");
-                        catalogWrapper.dataset.catalogActive = marqueChoisie;
+                        li.parentNode.parentNode.children[1].firstElementChild.classList.remove("displayed");
+                        li.parentNode.parentNode.children[1].firstElementChild.dataset.catalogActive = marqueChoisie;
                         return
                     }
 
@@ -123,10 +123,10 @@ function setupListeners() {
                         element.classList.remove('listed');
                     })
                     
-                    catalogWrapper.classList.remove("displayed");
+                    li.parentNode.parentNode.children[1].firstElementChild.classList.remove("displayed");
                     li.classList.add('listed');
-                    catalogWrapper.classList.add("displayed");
-                    catalogWrapper.dataset.catalogActive = marqueChoisie;
+                    li.parentNode.parentNode.children[1].firstElementChild.classList.add("displayed");
+                    li.parentNode.parentNode.children[1].firstElementChild.dataset.catalogActive = marqueChoisie;
                  
                 }
             })

@@ -196,17 +196,17 @@ aside.mega-content .categories {
     width: 100%;
 }
 .category-contents[data-category="tablette"] div[class^="tablette"] {
-    display: block;
+    display: flex;
     padding: 1rem;
     width: 100%;
 }
 .category-contents[data-category="ordinateur"] div[class^="ordinateur"] {
-    display: block;
+    display: flex;
     padding: 1rem;
     width: 100%;
 }
 .category-contents[data-category="autre-objet"] div[class^="autre-objet"] {
-    display: block;
+    display: flex;
     padding: 1rem;
     width: 100%;
 }
@@ -216,12 +216,14 @@ aside.mega-content .categories {
     padding: .4rem .2rem;
     font-size: large;
     cursor: pointer;
-    /* border:  1.1px solid red; */
+    box-shadow: 2px 4px 6px rgb(0 0 0/16%);
     box-sizing: border-box;
     margin-top: .4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+   border-top-left-radius: .5rem;
+   border-bottom-left-radius: .5rem;
 }
 
 .marques li:first-of-type{
@@ -344,8 +346,15 @@ div.catalog-wrapper.displayed {
 }
 
 
+/*****
+
+Pour les smartphones
+
+******/
+
+
 div.catalog-wrapper[data-catalog-active="apple"] > ul.catalog.apple {
-   display: block; 
+   display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="samsung"] > ul.catalog.samsung {
    display: flex; 
@@ -363,17 +372,108 @@ div.catalog-wrapper[data-catalog-active="huawei"] > ul.catalog.huawei {
    display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="sony"] > ul.catalog.sony {
-   display: block; 
+   display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="wiko"] > ul.catalog.wiko {
-   display: block; 
+   display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="nokia"] > ul.catalog.nokia {
-   display: block; 
+   display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="asus"] > ul.catalog.asus {
-   display: block; 
+   display: flex; 
 }
 div.catalog-wrapper[data-catalog-active="autres-marques"] > ul.catalog.autres-marques {
-   display: block; 
+   display: flex; 
 }
+
+/*****
+
+Pour les tablettes
+
+******/
+.tablette-content > ul {
+   flex: 30%;
+}
+.tablette-content > div {
+   flex: 70%;
+}
+
+div.catalog-wrapper[data-catalog-active="ipad"] > ul.catalog.ipad {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="ipad-mini"] > ul.catalog.ipad-mini {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="ipad-pro"] > ul.catalog.ipad-pro {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="ipad-air"] > ul.catalog.ipad-air {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="galaxy-tab-a"] > ul.catalog.galaxy-tab-a {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="galaxy-tab-s"] > ul.catalog.galaxy-tab-s {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="galaxy-tab"] > ul.catalog.galaxy-tab {
+    display: block; 
+ }
+div.catalog-wrapper[data-catalog-active="autres-tab"] > ul.catalog.autres-tab {
+    display: block; 
+ }
+
+/*****
+
+Pour les ordi
+
+******/
+.ordinateur-content > ul {
+    flex: 30%;
+ }
+ .ordinateur-content > div {
+    flex: 70%;
+ }
+ div.catalog-wrapper[data-catalog-active="macbook-air"] > ul.catalog.macbook-air {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="macbook-pro"] > ul.catalog.macbook-pro {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="pc-windows"] > ul.catalog.pc-windows {
+    display: flex; 
+ }
+
+
+/*****
+
+Pour les objets nomades
+
+******/
+.autre-objet-content > ul {
+    flex: 30%;
+ }
+ .autre-objet-content > div {
+    flex: 70%;
+ }
+ div.catalog-wrapper[data-catalog-active="console"] > ul.catalog.console {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="accessoires"] > ul.catalog.accessoires {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="montres"] > ul.catalog.montres {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="photos"] > ul.catalog.photos {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="trotinette"] > ul.catalog.trotinette {
+    display: flex; 
+ }
+div.catalog-wrapper[data-catalog-active="autres-objets"] > ul.catalog.autres-objets {
+    display: flex; 
+ }
+
+
